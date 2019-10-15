@@ -1,6 +1,6 @@
 import React from "react";
 
-const places = [
+const Travels = [
   {
     destination:"Toulouse",
     country:"France",
@@ -35,7 +35,7 @@ const places = [
 
 const Travel = () => (
   <div>
-    {places.map(place => (
+    {Travels.map(place => (
       <div>
         <p>I went to {place.destination}, in {place.country}, located over {place.distance} km from Lisbon! </p>
         <img src={place.photo} alt={place.destination}></img>
