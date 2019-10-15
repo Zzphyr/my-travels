@@ -10,6 +10,29 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">My Travels</h1>
         </header>
+        <Travel />
+      </div>
+    );
+  }
+}
+
+export default App;
+
+
+/* From React 1
+
+import React, { Component } from "react";
+import "./App.css";
+
+import Travel from "./Travel";
+
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <h1 className="App-title">My Travels</h1>
+        </header>
         <Travel
           destination="London"
           country="UK"
@@ -28,3 +51,5 @@ class App extends Component {
 }
 
 export default App;
+
+*/
