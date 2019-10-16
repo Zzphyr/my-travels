@@ -1,46 +1,9 @@
 import React from "react";
 
-const Travels = [
-  {
-    destination:"Toulouse",
-    country:"France",
-    photo:"https://i.imgur.com/mZZUFSL.png",
-    distance:"1000"
-  },
-  {
-    destination:"London",
-    country:"UK",
-    photo:"https://i.imgur.com/ddsvKtH.png",
-    distance:"1550"
-  },
-  {
-    destination:"Kraków",
-    country:"Poland",
-    photo:"https://i.imgur.com/ddPJwfY.png?1",
-    distance:"2600"
-  },
-  {
-    destination:"Hong Kong",
-    country:"Hong Kong (technically China though)",
-    photo:"https://i.imgur.com/HhhEzbl.jpg",
-    distance:"11,000"
-  },
-  {
-    destination:"Tokyo",
-    country:"Japan",
-    photo:"https://i.imgur.com/TBBLp75.png",
-    distance:"11,150"
-  }
-]
-
-const Travel = () => (
+const Travel = ({destination, country, photo, distance}) => (
   <div>
-    {Travels.map(place => (
-      <div>
-        <p>I went to {place.destination}, in {place.country}, located over {place.distance} km from Lisbon! </p>
-        <img src={place.photo} alt={place.destination}></img>
-      </div>
-    ))}
+    <p>I went to {destination}, in {country}, located over {distance} km from Lisbon! </p>
+    <img src={photo} alt={destination}></img>
   </div>
 );
 
@@ -52,10 +15,20 @@ export default Travel;
 
 
 
+/* From React 2
 
+import React from "react";
 
+const Travel = ({destination, country, photo, distance}) => (
+  <div>
+    <p>I went to {destination}, in {country}, located over {distance} km from Lisbon! </p>
+    <img src={photo} alt={destination}></img>
+  </div>
+);
 
+export default Travel;
 
+*/
 
 
 /* From React 1
